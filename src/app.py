@@ -1,7 +1,9 @@
 import curses
+from pathlib import Path
 from string import ascii_letters
 from json import load
 from textwrap import wrap
+from functools import reduce
 from resume_entry import ResumeEntry
 from resume_window import ResumeWindow
 
@@ -18,7 +20,7 @@ class App:
         self.__parse_json()
 
     def __parse_json(self):
-        with open('data/app_data.json') as f:
+        with open('{}/data/app_data.json'.format(Path(__file__).parent.resolve())) as f:
             data = load(f)['data']
             self.commands = data['commands']
             self.prelude = data['prelude']
@@ -29,8 +31,8 @@ class App:
                 self.resume_entries.append(ResumeEntry(d))
 
     def __main__(self, stdscr):
-        for entry in self.resume_entries:
-            self.windows.append(ResumeWindow(curses.LINES - 8, curses.COLS - 4, 5, 2, entry))
+        for i, entry in enumerate(self.resume_entries):
+            self.windows.append(ResumeWindow(curses.LINES - 8, curses.COLS - 4, 5, 2, entry, i))
 
         stdscr.clear()
         curses.curs_set(0)
@@ -65,11 +67,13 @@ class App:
 
     def __print_commands(self, window):
         maxy, _ = window.getmaxyx()
-        curx = 0
+        _, x = window.getbegyx()
+        total_length = reduce(lambda a, b: len(str(a)) + len(str(b)), list(self.commands.values()))
+        curx = total_length
 
-        for _, command in self.commands.items():
-            curx += len(command)
-            window.addstr(maxy - 2, curx, command)
+        for command in self.commands.values():
+            window.addstr(maxy - 2, curx , command)
+            curx += len(command) + 2
 
         window.refresh()
 

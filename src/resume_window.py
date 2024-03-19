@@ -2,7 +2,8 @@ import curses
 from textwrap import wrap
 
 class ResumeWindow:
-    def __init__(self, lines, cols, height, width, resume_entry):
+    def __init__(self, lines, cols, height, width, resume_entry, index):
+        self.index = index
         self.resume_entry = resume_entry
         self.window = curses.newwin(lines, cols, height, width)
         self.y, self.x = self.window.getbegyx()
@@ -26,6 +27,7 @@ class ResumeWindow:
 
     def __print_heading(self):
         self.window.addstr(self.y - 4, self.x, self.resume_entry.heading())
+        self.window.addstr(self.y - 4, self.maxx - 9, 'Page {}'.format(str(self.index + 1)))
 
     def __print_subheading(self):
         padding = len(self.resume_entry.heading()) + 1

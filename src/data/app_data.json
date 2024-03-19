@@ -13,6 +13,21 @@
     },
     "entries": [
       {
+        "heading": "Fabric Health, New York, NY",
+        "subheading": "(Remote)",
+        "title": "Senior Software Engineer",
+        "dateStart": "April 2021",
+        "dateEnd": "Present",
+        "summary": "After an aquisition from Florence from Bright Health Group (now called Fabric Health), I continued working on internal and external APIs for other internal applications as well as third-party API consumers, in house gems, the front-end Angular.js application and helping teammates by being a go-to technical resource as well as making myself avaialble for pairing sessions.",
+        "skills": [
+          "Ruby / Rails",
+          "HTML / CSS / JavaScript",
+          "Bootstrap",
+          "RSpec",
+          "RSwag"
+        ]
+      },
+      {
         "heading": "Bright Health Group, Minneapolis, MN",
         "subheading": "(Remote)",
         "title": "Senior Engineer 3",
@@ -23,7 +38,8 @@
           "Ruby / Rails",
           "HTML / CSS / JavaScript",
           "Bootstrap",
-          "RSpec"
+          "RSpec",
+          "RSwag"
         ]
       },
       {
@@ -32,7 +48,7 @@
         "title": "Senior Software Developer",
         "dateStart": "January 2019",
         "dateEnd": "August 2021",
-        "summary": "Working in technologies like Ruby on Rails and various different JavaScript frameworks, I helped teams implement their ideas as well as build up their knowledge of software development and code design.",
+        "summary": "Working in technologies like Ruby on Rails and various different JavaScript frameworks, I helped teams as a consultant to implement their ideas as well as build up their knowledge of software development and code design. I had the opportunity to work with small buisnesses as well as companies like ZenDesk and Disney.",
         "skills": [
           "Ruby / Rails",
           "HTML / CSS / JavaScript",
@@ -77,6 +93,18 @@
         "skills": [
           "HTML / CSS / JavaScript",
           "C# / .NET / Xamarin"
+        ]
+      },
+      {
+        "heading": "CrowdEngine",
+        "subheading": "",
+        "title": "Customer Support / Front End Developer",
+        "dateStart": "March 2013",
+        "dateEnd": "November 2014",
+        "summary": "My responsibilities ranged from assisting new and existing customers by answering questions about the platform and customizing their personal websites on the platform and collaborating with backend developers.",
+        "skills": [
+          "HTML / CSS / JavaScript",
+          "jQuery"
         ]
       }
     ]
