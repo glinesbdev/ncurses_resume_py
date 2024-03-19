@@ -1,0 +1,84 @@
+{
+  "data": {
+    "prelude": {
+      "name": "Bradyn Glines",
+      "phone": "(608) 620-0258",
+      "email": "glinesbdev@gmail.com",
+      "tagline": "My 10+ years of web development and programming experience has led me to work on a lot of different types of projects solving a multitude of different problems."
+    },
+    "commands": {
+      "exit": "<F1>: Exit",
+      "prev": "<Up Arrow>: Previous Page",
+      "next": "<Down Arrow>: Next Page"
+    },
+    "entries": [
+      {
+        "heading": "Bright Health Group, Minneapolis, MN",
+        "subheading": "(Remote)",
+        "title": "Senior Engineer 3",
+        "dateStart": "August 2021",
+        "dateEnd": "April 2023",
+        "summary": "When hired, my main role was to support the company’s telehealth service web application (RoR) by helping to develop a localization (I18n) solution. I was quickly pulled in to work on maintaining and providing new features for in-house gems and other internal APIs. Shortly after, I was looked at as a technical resource and “go-to” team member to help diagnose application issues or when planning, designing and developing new application features as our team's feature lead.",
+        "skills": [
+          "Ruby / Rails",
+          "HTML / CSS / JavaScript",
+          "Bootstrap",
+          "RSpec"
+        ]
+      },
+      {
+        "heading": "Bendyworks, Madison, WI",
+        "subheading": "",
+        "title": "Senior Software Developer",
+        "dateStart": "January 2019",
+        "dateEnd": "August 2021",
+        "summary": "Working in technologies like Ruby on Rails and various different JavaScript frameworks, I helped teams implement their ideas as well as build up their knowledge of software development and code design.",
+        "skills": [
+          "Ruby / Rails",
+          "HTML / CSS / JavaScript",
+          "RSpec",
+          "NodeJS",
+          "C# / .NET / Xamarin"
+        ]
+      },
+      {
+        "heading": "Wellbe, Madison, WI",
+        "subheading": "",
+        "title": "Full Stack Web Developer",
+        "dateStart": "May 2020",
+        "dateEnd": "November 2020",
+        "summary": "Hired as a full stack web developer working both in Ruby on Rails and the front-end, I quickly found the front-end lacking modern tooling and revamped it with interesting technologies like React and StencilJS. I brought high reusability to the front-end by building a modularized Web Components based architecture to bring scalability, composability, reusability, and quick iteration.",
+        "skills": [
+          "HTML / CSS / JavaScript",
+          "WebComponents"
+        ]
+      },
+      {
+        "heading": "Hotel MSSNGR, Berlin, Germany",
+        "subheading": "",
+        "title": "Software Developer",
+        "dateStart": "October 2018",
+        "dateEnd": "January 2019",
+        "summary": "My role was to support the company’s main website written in Ruby on Rails, an API written with Sinatra and support the company’s other 3rd party development groups using our APIs to develop their mobile applications.",
+        "skills": [
+          "Ruby / Rails",
+          "HTML / CSS / JavaScript",
+          "RSpec",
+          "Elixir"
+        ]
+      },
+      {
+        "heading": "4Life Research, Sandy, UT",
+        "subheading": "",
+        "title": "Software Developer",
+        "dateStart": "March 2015",
+        "dateEnd": "January 2018",
+        "summary": "I was responsible for assisting the front-end development team with what they needed from the back end. I was also responsible for interfacing with the architecture team to help design APIs of in-house software libraries that would be consumed in the .NET MVC project and integrating those libraries.",
+        "skills": [
+          "HTML / CSS / JavaScript",
+          "C# / .NET / Xamarin"
+        ]
+      }
+    ]
+  }
+}
