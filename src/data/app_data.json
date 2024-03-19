@@ -2,9 +2,12 @@
   "data": {
     "prelude": {
       "name": "Bradyn Glines",
-      "phone": "(608) 620-0258",
       "email": "glinesbdev@gmail.com",
-      "tagline": "My 10+ years of web development and programming experience has led me to work on a lot of different types of projects solving a multitude of different problems."
+      "tagline": "My 10+ years of web development and programming experience has led me to work on a lot of different types of projects solving a multitude of different problems.",
+      "external_links": [
+        "https://github.com/glinesbdev",
+        "https://gitlab.com/glinesbdev"
+      ]
     },
     "commands": {
       "exit": "<F1>: Exit",
@@ -22,6 +25,7 @@
         "skills": [
           "Ruby / Rails",
           "HTML / CSS / JavaScript",
+          "Angular.js",
           "Bootstrap",
           "RSpec",
           "RSwag"
@@ -37,6 +41,7 @@
         "skills": [
           "Ruby / Rails",
           "HTML / CSS / JavaScript",
+          "Angular.js",
           "Bootstrap",
           "RSpec",
           "RSwag"

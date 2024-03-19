@@ -22,3 +22,4 @@ class ResumeEntry:
 
     def skills(self):
         return self.json_data['skills']
+

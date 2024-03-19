@@ -47,8 +47,8 @@ class ResumeWindow:
             self.window.addstr(self.y + 3 + i, self.x, part)
 
     def __print_skills(self):
-        offset = self.maxy - 13
-        self.window.addstr(self.maxy - 15, self.x, "Related Skills:")
+        offset = self.maxy - 16
+        self.window.addstr(self.maxy - 18, self.x, "Related Skills:")
 
         for i, skill in enumerate(self.resume_entry.skills()):
             self.window.addstr(offset, self.x, skill)

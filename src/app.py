@@ -32,7 +32,7 @@ class App:
 
     def __main__(self, stdscr):
         for i, entry in enumerate(self.resume_entries):
-            self.windows.append(ResumeWindow(curses.LINES - 8, curses.COLS - 4, 5, 2, entry, i))
+            self.windows.append(ResumeWindow(curses.LINES - 10, curses.COLS - 4, 6, 2, entry, i))
 
         stdscr.clear()
         curses.curs_set(0)
@@ -58,7 +58,9 @@ class App:
 
         window.addstr(1, 3, self.prelude['name'])
         window.addstr(2, 3, self.prelude['email'])
-        window.addstr(3, 3, self.prelude['phone'])
+
+        for i, link in enumerate(self.prelude['external_links']):
+            window.addstr(3 + i, 3, link)
 
         for i, part in enumerate(tagline):
             window.addstr(i + 1, len(tagline[0]), part)
@@ -69,10 +71,10 @@ class App:
         maxy, _ = window.getmaxyx()
         _, x = window.getbegyx()
         total_length = reduce(lambda a, b: len(str(a)) + len(str(b)), list(self.commands.values()))
-        curx = total_length
+        curx = int(curses.COLS / 2 - total_length)
 
         for command in self.commands.values():
-            window.addstr(maxy - 2, curx , command)
+            window.addstr(maxy - 3, curx , command)
             curx += len(command) + 2
 
         window.refresh()
