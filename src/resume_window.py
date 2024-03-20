@@ -1,8 +1,10 @@
 import curses
 from textwrap import wrap
+from resume_entry import ResumeEntry
+
 
 class ResumeWindow:
-    def __init__(self, lines, cols, height, width, resume_entry, index):
+    def __init__(self, lines: int, cols: int, height: int, width: int, resume_entry: ResumeEntry, index: int):
         self.index = index
         self.resume_entry = resume_entry
         self.window = curses.newwin(lines, cols, height, width)
@@ -27,30 +29,29 @@ class ResumeWindow:
 
     def __print_heading(self):
         self.window.addstr(self.y - 4, self.x, self.resume_entry.heading())
-        self.window.addstr(self.y - 4, self.maxx - 9, 'Page {}'.format(str(self.index + 1)))
+        self.window.addstr(self.y - 4, self.maxx - 9, f'Page {self.index + 1}')
 
     def __print_subheading(self):
         padding = len(self.resume_entry.heading()) + 1
         self.window.addstr(self.y - 4, self.x + padding, self.resume_entry.subheading())
 
     def __print_tenure(self):
-        tenure = "{} - {}".format(self.resume_entry.date_start(), self.resume_entry.date_end())
+        tenure = f'{self.resume_entry.date_start()} - {self.resume_entry.date_end()}'
         self.window.addstr(self.y - 3, self.x, tenure)
 
     def __print_title(self):
         self.window.addstr(self.y - 2, self.x, self.resume_entry.title())
 
     def __print_summary(self):
-        self.window.addstr(self.y + 1, self.x, "Summary:")
+        self.window.addstr(self.y + 1, self.x, 'Summary:')
 
         for i, part in enumerate(wrap(self.resume_entry.summary(), self.maxx - 3)):
             self.window.addstr(self.y + 3 + i, self.x, part)
 
     def __print_skills(self):
         offset = self.maxy - 16
-        self.window.addstr(self.maxy - 18, self.x, "Related Skills:")
+        self.window.addstr(self.maxy - 18, self.x, 'Related Skills:')
 
         for i, skill in enumerate(self.resume_entry.skills()):
             self.window.addstr(offset, self.x, skill)
             offset += 1
-
